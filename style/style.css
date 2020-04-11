@@ -30,18 +30,106 @@ html, body {
     box-sizing: border-box;
 }
 
-/*********************
-    TEXT AREA
-*********************/
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(../images/bg-intro-desktop.png) hsl(0, 100%, 74%);
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: 
+        "text-copy signup"
+        "footer footer";
+    min-height: 100vh;
+}
 
 /*********************
-    FORM AREA
+    TEXT COPY AREA
 *********************/
+
+
+.text-copy {
+    color: #ffffff;
+    grid-area: text-copy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-copy h1 {
+    font-weight: 700;
+}
+
+/*********************
+    SIGNUP AREA
+*********************/
+.signup {
+    grid-area: signup;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing {
+    background-color: hsl(248, 32%, 49%);
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing span {
+    font-weight: 600;
+}
+
+.form {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form label {
+    display: none;
+}
+
+.form #submit {
+    background-color: hsl(154, 59%, 51%);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.form .terms {
+    font-size: .5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.form .terms a {
+    color: hsl(0, 100%, 74%) ;
+    font-weight: 600;
+}
+
+
 
 
 /*********************
     FOOTER
 *********************/
+footer {
+    grid-area: footer;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -49,3 +137,10 @@ html, body {
 /*********************
     MEDIA QUERIES
 *********************/
+
+@media (max-width: 768px) {
+    body {
+        background: url(../images/bg-intro-mobile.png) hsl(0, 100%, 74%);
+    }
+    
+}
