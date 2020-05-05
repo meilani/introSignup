@@ -32,13 +32,17 @@
                 <div class="form">
                     <form action="">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name" required placeholder="First Name">
+                        <input class="input-field" type="text" name="first-name" id="first-name" required placeholder="First Name">
+                        <p class="invalid-status">First name cannot be empty</p>
                         <label for="last-name">Last Name </label>
-                        <input type="text" name="last-name" id="last-name" required placeholder="Last Name">
+                        <input class="input-field" type="text" name="last-name" id="last-name" required placeholder="Last Name">
+                        <p class="invalid-status">Last name cannot be empty</p>
                         <label for="email-address">Email Address</label>
-                        <input type="email" name="email-address" id="email-address" required placeholder="Email Address">
+                        <input class="input-field" type="email" name="email-address" id="email-address" required placeholder="Email Address">
+                        <p class="invalid-status">Looks like this is not an email</p>
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input class="input-field" type="password" name="password" id="password" placeholder="Password" required>
+                        <p class="invalid-status">Password cannot be empty</p>
                         <input type="submit" id="submit" value="Claim your free trial">
                     </form>
                     <p class="terms">By clicking the button, you are agreeing to our <a>Terms and Services</a></p>
